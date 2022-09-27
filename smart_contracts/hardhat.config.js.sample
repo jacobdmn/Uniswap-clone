@@ -1,0 +1,26 @@
+require("@nomiclabs/hardhat-waffle");
+
+/**
+ * @type import('hardhat/config').HardhatUserConfig
+ */
+module.exports = {
+  solidity: "0.8.4",
+  networks: {
+    // rinkeby: {
+    //   url: "https://eth-rinkeby.alchemyapi.io/v2/mE",
+    //   accounts: [
+    //     'METAMASK PRIVATE KEY'
+    //   ],
+    // },
+    ropsten: {
+      url: "ALCHEMY URL",
+      accounts: [
+        'METAMASK PRIVATE KEY'
+      ],
+      gas: 5500000,  // Gas limit, how much gas we are willing to spent
+      gasPrice: 20000000000, // Gas price, how much we are willing to pay for unit of gas
+      confirmations: 2, // # of confs to wait between deployments. (default: 0)
+      timeoutBlocks: 200, // # of blocks before a deployment times out  (minimum/default: 50)
+    }
+  }
+};
